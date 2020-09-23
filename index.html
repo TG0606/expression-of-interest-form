@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="title">Job Application Form</h1>
+      <p id="description">Please fill out the information below:</p>
+    </header>
+    <form id="survey-form" action="#">
+      <label id="family-name-label" for="family-name">Family Name</label>
+      <input id="family-name" type="text" required>
+      <label id="given-name-label" for="given-name">Given Name</label>
+      <input id="given-name" type="text" required>
+      <label id="preferred-name-label" for="preferred-name">Preferred Name(Optional)</label>
+      <input id="preferred-name" type="text"><br>
+      <label id="email-label" for="email">Email</label>
+      <input id="email" type="email" placeholder="Enter a valid email" required><br>
+      <label id="work-experience-label" for="work-experience">Years of related experience</label>
+      <input id="work-experience" type="number" min=0 max=99 placeholder="Select or enter" required><br>
+      <label id="DOB-label" for="DOB">Date of Birth</label>
+      <input id="DOB" type="date"><br>
+      <label for="status">What is your current status?</label><br>
+      <select name="status" id="dropdown">
+        <option disabled selected value>Please select</option>
+        <option value="single">Single</option>
+        <option value="inRelationship">In a relationship</option>
+        <option value="">Married</option>
+        <option value="preferNo">Prefer not to say</option>
+      </select>
+      <fieldset>
+        <lengend>
+          What types of jobs are you looking for?
+        </lengend><br>
+        <label for="ft">
+          <input id="ft" value="ft" type="checkbox" name="ft-job">Full Time</label><br>
+        <label for="pt">
+          <input id="pt" value="pt" type="checkbox" name="pt-job">Part Time</label><br>
+        <label for="casual">
+          <input id="casual" value="casual" type="checkbox" name="casual-job">Casual</label><br>
+        <label for="contract">
+          <input id="contract" value="contract" type="checkbox" name="contract-job">Contract</label>
+      </fieldset>
+      <fieldset>
+        <lengend>
+          Where did you hear from us?
+        </lengend><br>
+        <label for="seek">
+          <input id="seek" value="seek" type="radio" name="source" checked>
+          Seek</label><br>
+        <label for="job-board">
+          <input id="job-board" value="job-board" type="radio" name="source">Job Board</label><br>
+
+        <label for="referral">
+          <input id="referral" value="referral" type="radio" name="source">Referral</label><br>
+        <label for="others">
+          <input id="others" value="others" type="radio" name="source">Others</label>
+      </fieldset>
+      <button type="submit">Submit</button>
+
+
+    </form>
+  </div>
+</body>
+
+</html>
