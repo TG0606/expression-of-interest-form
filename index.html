@@ -3,70 +3,142 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Survey Form</title>
+  <title>Expression of interest form</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="container">
-    <header>
-      <h1 id="title">Job Application Form</h1>
-      <p id="description">Please fill out the information below:</p>
+    <header class="header">
+      <h1 id="title" class="text-center">Expression of Interest Form</h1>
+      <p id="instruction" class="instruction text-center">Please fill out the information below:</p>
     </header>
-    <form id="survey-form" action="#">
-      <label id="family-name-label" for="family-name">Family Name</label>
-      <input id="family-name" type="text" required>
-      <label id="given-name-label" for="given-name">Given Name</label>
-      <input id="given-name" type="text" required>
-      <label id="preferred-name-label" for="preferred-name">Preferred Name(Optional)</label>
-      <input id="preferred-name" type="text"><br>
-      <label id="email-label" for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter a valid email" required><br>
-      <label id="work-experience-label" for="work-experience">Years of related experience</label>
-      <input id="work-experience" type="number" min=0 max=99 placeholder="Select or enter" required><br>
-      <label id="DOB-label" for="DOB">Date of Birth</label>
-      <input id="DOB" type="date"><br>
-      <label for="status">What is your current status?</label><br>
-      <select name="status" id="dropdown">
-        <option disabled selected value>Please select</option>
-        <option value="single">Single</option>
-        <option value="inRelationship">In a relationship</option>
-        <option value="">Married</option>
-        <option value="preferNo">Prefer not to say</option>
-      </select>
+    <form id="expression-interest-form" action="#" autocomplete="off">
+      <div class="form-group">
+        <label id="family-name-label" for="family-name">Family Name*</label>
+        <input type="text" name="family-name" id="family-name" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="given-name-label" for="given-name">Given Name*</label>
+        <input type="text" name="given-name" id="given-name" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="preferred-name-label" for="preferred-name">Preferred Name</label>
+        <input type="text" id="preferred-name" name="preferred-name" class="form-control" placeholder="Optional" />
+      </div>
+      <div class="form-group">
+        <label id="bday-label" for="bday">Date of Birth*</label>
+        <input type="date" id="bday" name="bday" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="address-label" for="address">Address*</label>
+        <input type="text" id="address" name="address" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="suburb-label" for="suburb">Suburb*</label>
+        <input type="text" id="suburb" name="suburb" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="postcode-label" for="postcode">Postcode*</label>
+        <input type="number" id="postcode" name="postcode" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label id="contact-number-label" for="contact-number">Contact Number*</label>
+        <input type="number" id="contact-number" name="contact-number" class="form-control" placeholder="Mobile number or  telephone number" required />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email*</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter a valid email" required />
+      </div>
+      <div class="form-group">
+        <label id="work-experience-label" for="work-experience">Years of Related Experience*</label>
+        <input type="number" id="work-experience" name="work-experience" class="form-control" min=0 max=99 placeholder="Choose or enter" required />
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <lengend for="status">What is your current status?*</lengend>
+          <select id="dropdown" name="status" class="form-control" required>
+            <option disabled selected value>Please select</option>
+            <option value="single">Single</option>
+            <option value="inRelationship">In a relationship</option>
+            <option value="">Married</option>
+            <option value="preferNo">Prefer not to say</option>
+          </select>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <lengend>What areas are you interested in?*</lengend>
+          <label for="front-end">
+            <input id="front-end" value="front-end" type="checkbox" name="front-end-job" />Front End Developer
+          </label>
+          <label for="back-end">
+            <input id="back-end" value="back-end" type="checkbox" name="back-end-job" />Back End Developer
+          </label>
+          <label for="full-stack">
+            <input id="full-stack" value="full-stack" type="checkbox" name="full-stack-job">Full Stack Developer
+          </label>
+          <label for="ux-designer">
+            <input id="ux-designer" value="ux-designer" type="checkbox" name="ux-designer-job">UX Designer
+          </label>
+          <label for="copy-writer">
+            <input id="copy-writer" value="copy-writer" type="checkbox" name="copy-writer-job">Copy Writer
+          </label>
+          <label for="data-scientist">
+            <input id="data-scientist" value="data-scientist" type="checkbox" name="data-scientist-job">Data Scientist
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="form-group"></div>
       <fieldset>
         <lengend>
-          What types of jobs are you looking for?
-        </lengend><br>
+          What types of jobs are you looking for? *
+        </lengend>
         <label for="ft">
-          <input id="ft" value="ft" type="checkbox" name="ft-job">Full Time</label><br>
+          <input id="ft" class="input-checkbox" value="ft" type="checkbox" name="work-type">Full Time
+        </label>
         <label for="pt">
-          <input id="pt" value="pt" type="checkbox" name="pt-job">Part Time</label><br>
+          <input id="pt" class="input-checkbox" value="pt" type="checkbox" name="work-type">Part Time
+        </label>
         <label for="casual">
-          <input id="casual" value="casual" type="checkbox" name="casual-job">Casual</label><br>
+          <input id="casual" class="input-checkbox" value="casual" type="checkbox" name="work-type">Casual
+        </label>
         <label for="contract">
-          <input id="contract" value="contract" type="checkbox" name="contract-job">Contract</label>
+          <input id="contract" class="input-checkbox" value="contract" type="checkbox" name="work-type">Contract
+        </label>
       </fieldset>
-      <fieldset>
-        <lengend>
-          Where did you hear from us?
-        </lengend><br>
-        <label for="seek">
-          <input id="seek" value="seek" type="radio" name="source" checked>
-          Seek</label><br>
-        <label for="job-board">
-          <input id="job-board" value="job-board" type="radio" name="source">Job Board</label><br>
-
-        <label for="referral">
-          <input id="referral" value="referral" type="radio" name="source">Referral</label><br>
-        <label for="others">
-          <input id="others" value="others" type="radio" name="source">Others</label>
-      </fieldset>
-      <button type="submit">Submit</button>
-
-
+      <div class="form-group">
+        <fieldset>
+          <lengend>
+            Where did you hear from us? *
+          </lengend>
+          <label for="seek">
+            <input id="seek" value="seek" type="radio" name="source" class="input-radio" required>
+            Seek
+          </label>
+          <label for="job-board">
+            <input id="job-board" value="job-board" type="radio" name="source" class="input-radio" required>Job Board
+          </label>
+          <label for="referral">
+            <input id="referral" value="referral" type="radio" name="source" class="input-radio" required>Referral</label>
+          <label for="others">
+            <input id="others" value="others" type="radio" name="source" class="input-radio" required>Others</label>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <label for="personal-intrduction">Why do you want to work here? *</label>
+        <textarea name="personal-intrduction" id="personal-intrduction" class="input-textarea" cols="30" rows="10" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="privacy-consent">
+          <input name="privacy-consent" id="privacy-consent" type="checkbox" required>I have read and agree to the <a href="#">terms</a> of use and <a href="#">privacy policy</a>*
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
     </form>
-  </div>
+  </div>  <!-- container ends -->
 </body>
-
 </html>
