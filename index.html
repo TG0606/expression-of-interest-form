@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expression of interest form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -11,7 +13,7 @@
   <div class="container">
     <header class="header">
       <h1 id="title" class="text-center">Expression of Interest Form</h1>
-      <p id="instruction" class="instruction text-center">Please fill out the information below:</p>
+      <p id="instruction" class="instruction text-center">Please fill out the information below :</p>
     </header>
     <form id="expression-interest-form" action="#" autocomplete="off">
       <div class="form-group">
@@ -68,50 +70,52 @@
       </div>
       <div class="form-group">
         <fieldset>
-          <lengend>What areas are you interested in?*</lengend>
+          <lengend>
+            <p>What areas are you interested in?*</p>
+          </lengend>
           <label for="front-end">
-            <input id="front-end" value="front-end" type="checkbox" name="front-end-job" />Front End Developer
+            <input id="front-end" class="input-checkbox" value="front-end" type="checkbox" name="front-end-job" />Front End Developer
           </label>
           <label for="back-end">
-            <input id="back-end" value="back-end" type="checkbox" name="back-end-job" />Back End Developer
+            <input id="back-end" class="input-checkbox" value="back-end" type="checkbox" name="back-end-job" />Back End Developer
           </label>
           <label for="full-stack">
-            <input id="full-stack" value="full-stack" type="checkbox" name="full-stack-job">Full Stack Developer
+            <input id="full-stack" class="input-checkbox" value="full-stack" type="checkbox" name="full-stack-job">Full Stack Developer
           </label>
           <label for="ux-designer">
-            <input id="ux-designer" value="ux-designer" type="checkbox" name="ux-designer-job">UX Designer
+            <input id="ux-designer" class="input-checkbox" value="ux-designer" type="checkbox" name="ux-designer-job">UX Designer
           </label>
           <label for="copy-writer">
-            <input id="copy-writer" value="copy-writer" type="checkbox" name="copy-writer-job">Copy Writer
+            <input id="copy-writer" class="input-checkbox" value="copy-writer" type="checkbox" name="copy-writer-job">Copy Writer
           </label>
           <label for="data-scientist">
-            <input id="data-scientist" value="data-scientist" type="checkbox" name="data-scientist-job">Data Scientist
+            <input id="data-scientist" class="input-checkbox" value="data-scientist" type="checkbox" name="data-scientist-job">Data Scientist
           </label>
         </fieldset>
       </div>
-
-      <div class="form-group"></div>
-      <fieldset>
-        <lengend>
-          What types of jobs are you looking for? *
-        </lengend>
-        <label for="ft">
-          <input id="ft" class="input-checkbox" value="ft" type="checkbox" name="work-type">Full Time
-        </label>
-        <label for="pt">
-          <input id="pt" class="input-checkbox" value="pt" type="checkbox" name="work-type">Part Time
-        </label>
-        <label for="casual">
-          <input id="casual" class="input-checkbox" value="casual" type="checkbox" name="work-type">Casual
-        </label>
-        <label for="contract">
-          <input id="contract" class="input-checkbox" value="contract" type="checkbox" name="work-type">Contract
-        </label>
-      </fieldset>
       <div class="form-group">
         <fieldset>
           <lengend>
-            Where did you hear from us? *
+            <p>What types of jobs are you looking for?*</p>
+          </lengend>
+          <label for="ft">
+            <input id="ft" class="input-checkbox" value="ft" type="checkbox" name="work-type">Full Time
+          </label>
+          <label for="pt">
+            <input id="pt" class="input-checkbox" value="pt" type="checkbox" name="work-type">Part Time
+          </label>
+          <label for="casual">
+            <input id="casual" class="input-checkbox" value="casual" type="checkbox" name="work-type">Casual
+          </label>
+          <label for="contract">
+            <input id="contract" class="input-checkbox" value="contract" type="checkbox" name="work-type">Contract
+          </label>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <lengend>
+            <p>Where did you hear from us?*</p>
           </lengend>
           <label for="seek">
             <input id="seek" value="seek" type="radio" name="source" class="input-radio" required>
@@ -127,18 +131,19 @@
         </fieldset>
       </div>
       <div class="form-group">
-        <label for="personal-intrduction">Why do you want to work here? *</label>
-        <textarea name="personal-intrduction" id="personal-intrduction" class="input-textarea" cols="30" rows="10" required></textarea>
+        <label for="work-reason">Why do you want to work here?*</label>
+        <textarea name="work-reason" id="work-reason" class="input-textarea" required></textarea>
       </div>
       <div class="form-group">
         <label for="privacy-consent">
-          <input name="privacy-consent" id="privacy-consent" type="checkbox" required>I have read and agree to the <a href="#">terms</a> of use and <a href="#">privacy policy</a>*
+          <input name="privacy-consent" id="privacy-consent" class="input-checkbox" type="checkbox" required>I have read and agree to the terms of use and privacy policy*
         </label>
       </div>
       <div class="form-group">
         <button type="submit" id="submit" class="submit-button">Submit</button>
       </div>
     </form>
-  </div>  <!-- container ends -->
+  </div> <!-- container ends -->
 </body>
+
 </html>
