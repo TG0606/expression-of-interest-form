@@ -20,6 +20,39 @@ body {
   margin: 3rem auto 0 auto;
 }
 
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p, legend {
+  font-size: 1.125rem;
+}
+
+h1, p, legend {
+  margin-bottom: 0.6rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: solid 1px #414042;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -35,35 +68,6 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-h1 {
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-p, legend {
-  font-size: 1.125rem;
-}
-
-h1, p, legend {
-  margin-bottom: 0.6rem;
-}
-
-fieldset {
-  border: none;
-}
-
-label {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
-
-input, button, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
 }
 
 .header {
@@ -113,11 +117,11 @@ input, button, select, textarea {
 }
 
 .terms {
-  margin: 0 5px;
+  margin: 0 .25rem;
 }
 
 .conditions {
-  margin-left: 5px;
+  margin-left: .25rem;
 }
 
 .submit-button {
