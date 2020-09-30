@@ -4,9 +4,7 @@
   --color-black: #000;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,11 +28,9 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: linear-gradient(
-      115deg,
+  background: linear-gradient(115deg,
       rgba(141, 147, 171, 0.8),
-      rgba(214, 224, 240, 0.8)
-    ),
+      rgba(214, 224, 240, 0.8)),
     url(../image/background.jpg);
   background-size: cover;
   background-position: center;
@@ -46,13 +42,12 @@ h1 {
   line-height: 1.2;
 }
 
-p {
+p, legend {
   font-size: 1.125rem;
 }
 
-h1,
-p {
-  margin-bottom: 0.5rem;
+h1, p, legend {
+  margin-bottom: 0.6rem;
 }
 
 fieldset {
@@ -66,10 +61,7 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input,
-button,
-select,
-textarea {
+input, button, select, textarea {
   font-family: inherit;
   font-size: inherit;
 }
@@ -109,8 +101,7 @@ textarea {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.input-radio,
-.input-checkbox {
+.input-radio, .input-checkbox {
   margin-right: 0.7rem;
 }
 
@@ -121,6 +112,14 @@ textarea {
   resize: vertical;
 }
 
+.terms {
+  margin: 0 5px;
+}
+
+.conditions {
+  margin-left: 5px;
+}
+
 .submit-button {
   width: 100%;
   padding: 0.75rem;
@@ -129,6 +128,10 @@ textarea {
   border-radius: 2px;
   border: none;
   cursor: pointer;
+}
+
+.submit-button:hover {
+  opacity: 0.85;
 }
 
 @media (min-width: 480px) {
