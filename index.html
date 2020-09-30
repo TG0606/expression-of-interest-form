@@ -45,7 +45,7 @@
         <input type="number" id="postcode" name="postcode" class="form-control" required />
       </div>
       <div class="form-group">
-        <label id="contact-number-label" for="contact-number">Contact Number*</label>
+        <label id="contact-number-label" for="contact-number">Contact*</label>
         <input type="number" id="contact-number" name="contact-number" class="form-control" placeholder="Mobile number or  telephone number" required />
       </div>
       <div class="form-group">
@@ -53,12 +53,14 @@
         <input type="email" id="email" name="email" class="form-control" placeholder="Enter a valid email" required />
       </div>
       <div class="form-group">
-        <label id="work-experience-label" for="work-experience">Years of Related Experience*</label>
+        <label id="work-experience-label" for="work-experience">Years of related experience*</label>
         <input type="number" id="work-experience" name="work-experience" class="form-control" min=0 max=99 placeholder="Choose or enter" required />
       </div>
       <div class="form-group">
         <fieldset>
-          <lengend for="status">What is your current status?*</lengend>
+          <lengend for="status">
+            <p>What is your current status?*</p>
+          </lengend>
           <select id="dropdown" name="status" class="form-control" required>
             <option disabled selected value>Please select</option>
             <option value="single">Single</option>
@@ -122,7 +124,7 @@
             Seek
           </label>
           <label for="job-board">
-            <input id="job-board" value="job-board" type="radio" name="source" class="input-radio" required>Job Board
+            <input id="job-board" value="job-board" type="radio" name="source" class="input-radio" required>Newspaper
           </label>
           <label for="referral">
             <input id="referral" value="referral" type="radio" name="source" class="input-radio" required>Referral</label>
@@ -145,5 +147,4 @@
     </form>
   </div> <!-- container ends -->
 </body>
-
 </html>
